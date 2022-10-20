@@ -1,0 +1,29 @@
+<div>
+  <div *ngFor = "let e of tempArray; let i = index">
+    {{e}}
+  </div>
+</div>
+
+<button (click) ="insertNumber()">Insert random number</button><br><br>
+
+<button (click) = "mapMethod()">Show mapped array</button>
+<p>{{z}}</p>
+
+<button (click) = "findMethod()">Show specified element</button>
+<p>{{array3}}</p>
+
+<button (click) = "filterMethod()">Show filtered array</button>
+<p>{{y}}</p>
+
+<button (click) = "sumOfElements()">Sum of array elements</button>
+<p>{{total}}</p>
+
+<button (click) = "sortElements()">Sorting array alphabetically</button>
+<p>{{x}}</p>
+
+<button (click) = "sortNumbersAscending()">Show ascending order</button>
+<p>{{t}}</p>
+
+<button (click) = "forEachFunction()">Sum using forEach()</button>
+<p>{{totalSum2}}</p>
+
