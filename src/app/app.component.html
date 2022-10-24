@@ -1,2 +1,13 @@
-<app-home class = "home">
-</app-home>
+<p *ngIf="test">{{title}}</p>
+
+<div class = "parent">
+  <h1>Parent Component</h1>
+  <ul>
+    <li *ngFor="let h of home">{{h}}</li>
+  </ul>
+  <!-- [home]="currentHome" sending value of parent component to our child component-->
+  <app-home class = "home" [hamdija]="title" [home]="currentHome" (newHouse)="addTypeOfHouse($event)" (hamdija2)="activate($event)">
+  </app-home>
+</div>
+
+

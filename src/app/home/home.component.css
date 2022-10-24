@@ -1,6 +1,17 @@
-button{
-  background-color:lightblue;
+.bluebutton{
+  background-color:lightgreen;
   width:150px;
   height:70px;
+}
 
+.child{
+  background-color:lightblue;
+  border:1px solid gray;
+  margin:20px;
+  padding:20px;
+}
+
+h2{
+  text-align:center;
+  color:black;
 }

@@ -1,29 +1,39 @@
-<div>
-  <div *ngFor = "let e of tempArray; let i = index">
-    {{e}}
+<div class ="child">
+  <h2>Child Component</h2>
+  <p style ="text-align:center">Homes <strong>{{home}}</strong></p>
+  <label for="house input">Add a type of home: </label>
+  <input type ="text" id ="house input" #newHouse>
+  <button (click) = "addNewType(newHouse.value)">Add</button>
+  <div>
+    <div *ngFor = "let e of tempArray; let i = index">
+     {{e}}
+   </div>
   </div>
+
+  <button (click) ="insertNumber()">Insert random number</button><br><br>
+
+  <button (click) = "mapMethod()">Show mapped array</button>
+  <p>{{z}}</p>
+
+  <button (click) = "findMethod()">Show specified element</button>
+  <p>{{array3}}</p>
+
+  <button class =" bluebutton" (click) = "filterMethod()">Show filtered array</button>
+  <p>{{y}}</p>
+
+  <button class =" bluebutton" (click) = "sumOfElements()">Sum of array elements</button>
+  <p>{{total}}</p>
+
+  <button class =" bluebutton" (click) = "sortElements()">Sorting array alphabetically</button>
+  <p>{{x}}</p>
+
+  <button class =" bluebutton" (click) = "sortNumbersAscending()">Show ascending order</button>
+  <p>{{t}}</p>
+
+  <button class =" bluebutton" (click) = "forEachFunction()">Sum using forEach()</button>
+  <p>{{totalSum2}}</p>
 </div>
 
-<button (click) ="insertNumber()">Insert random number</button><br><br>
 
-<button (click) = "mapMethod()">Show mapped array</button>
-<p>{{z}}</p>
 
-<button (click) = "findMethod()">Show specified element</button>
-<p>{{array3}}</p>
-
-<button (click) = "filterMethod()">Show filtered array</button>
-<p>{{y}}</p>
-
-<button (click) = "sumOfElements()">Sum of array elements</button>
-<p>{{total}}</p>
-
-<button (click) = "sortElements()">Sorting array alphabetically</button>
-<p>{{x}}</p>
-
-<button (click) = "sortNumbersAscending()">Show ascending order</button>
-<p>{{t}}</p>
-
-<button (click) = "forEachFunction()">Sum using forEach()</button>
-<p>{{totalSum2}}</p>
 
