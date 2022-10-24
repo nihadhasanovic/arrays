@@ -7,11 +7,12 @@
 .child{
   background-color:lightblue;
   border:1px solid gray;
-  margin:20px;
-  padding:20px;
+  margin:5px;
+  padding:5px;
 }
 
 h2{
   text-align:center;
   color:black;
 }
+

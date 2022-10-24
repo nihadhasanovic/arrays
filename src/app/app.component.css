@@ -8,3 +8,20 @@ h1{
   color:black;
   text-align: center;
 }
+.homes{
+  text-align:center;
+}
+
+.firstStyle{
+  background-color: aqua;
+  font-size:20px;
+  text-align:center;
+
+}
+
+.secondStyle{
+  text-decoration:overline;
+  margin:20px;
+  padding:20px;
+  border:lightgray;
+}

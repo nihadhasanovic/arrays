@@ -2,12 +2,41 @@
 
 <div class = "parent">
   <h1>Parent Component</h1>
-  <ul>
-    <li *ngFor="let h of home">{{h}}</li>
-  </ul>
+
+  <div class = "numbers">
+    <p *ngFor = "let n of numbers">{{n}}</p>
+  </div>
+
+  <div class = "homes">
+    <p *ngFor = "let h of home">{{h}}</p>
+  </div>
+
   <!-- [home]="currentHome" sending value of parent component to our child component-->
-  <app-home class = "home" [hamdija]="title" [home]="currentHome" (newHouse)="addTypeOfHouse($event)" (hamdija2)="activate($event)">
+  <app-home class = "home"
+            [hamdija]="title"
+            [home]="currentHome"
+            (newHouse)="addTypeOfHouse($event)"
+            (hamdija2)="activate($event)"
+            (newNumberEvent)="addNumber($event)">
   </app-home>
+
 </div>
 
+<div class = "ngstyle">
 
+  <ul>
+    <li *ngFor = "let c of car"
+        [ngStyle]="styleText(c)">
+      <strong>{{c.type}}</strong><em> {{c.model}}</em> {{c.year}}<br><br>
+    </li>
+  </ul>
+</div>
+
+<hr>
+
+<div class = "infinite">
+  <p [style.color]="colorChar">
+  Attribute binding
+</p>
+  <ul><li [ngClass]="change()" *ngFor = "let b of bla">{{b}}</li></ul>
+</div>

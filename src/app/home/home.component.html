@@ -1,14 +1,18 @@
 <div class ="child">
   <h2>Child Component</h2>
-  <p style ="text-align:center">Homes <strong>{{home}}</strong></p>
+
+  <button (click) = "addNewNumber()">Add number to array</button>
+
+  <p style ="text-align:center">Home is: <strong>{{home}}</strong></p>
   <label for="house input">Add a type of home: </label>
   <input type ="text" id ="house input" #newHouse>
   <button (click) = "addNewType(newHouse.value)">Add</button>
-  <div>
-    <div *ngFor = "let e of tempArray; let i = index">
-     {{e}}
-   </div>
+
+  <br><br><br>
+  <div *ngFor = "let e of tempArray; let i = index">
+    {{e}}
   </div>
+
 
   <button (click) ="insertNumber()">Insert random number</button><br><br>
 
