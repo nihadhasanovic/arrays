@@ -30,13 +30,22 @@ export class HomeComponent implements OnInit {
   @Input() home = "building";
   @Output() newHouse = new EventEmitter<string>();
 
+  @Output() newNumberEvent = new EventEmitter<any>;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 
+  //creating a random number between 0 and 50
+  addNewNumber()
+  {
+    let value = Math.random()*50;
+    this.newNumberEvent.emit(value);
+  }
 
+  //adding new item to an array of strings [homes]
   addNewType(value: string)
   {
     this.newHouse.emit(value);
