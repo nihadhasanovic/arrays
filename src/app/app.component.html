@@ -35,8 +35,9 @@
 <hr>
 
 <div class = "infinite">
-  <p [style.color]="colorChar">
+  <p [style.color]="colorChar" [style.background-color]="'yellow'">
   Attribute binding
 </p>
   <ul><li [ngClass]="change()" *ngFor = "let b of bla">{{b}}</li></ul>
 </div>
+
