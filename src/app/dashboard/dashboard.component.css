@@ -1,0 +1,33 @@
+.userInput{
+
+  background-color: lightgray;
+  padding: 20px;
+  font-size:20px;
+  margin-left: 20px;
+  margin-right:1000px;
+  margin-top:20px;
+}
+
+input:hover {
+  background-color: lightyellow;
+}
+
+input{
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+label{
+  font-size:17px;
+  color:black;
+
+}
+
+button{
+  background-color: lightgreen;
+  font-size: 15px;
+  width: 100%;
+}
+
+

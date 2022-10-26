@@ -53,9 +53,9 @@ export class AppComponent {
   toggleS(index:number)
   {
     if (this.selectedIndex==index)
-      this.selectedIndex=-1;
+      {this.selectedIndex=-1;}
     else
-      this.selectedIndex=index;
+      {this.selectedIndex=index;}
   }
 
 

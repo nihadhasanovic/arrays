@@ -8,6 +8,7 @@ import {LandingService, User} from "../services/landing.service";
 })
 export class DashboardComponent implements OnInit {
   user!: User
+  input=false;
   valueInput: User = {
     name: '',
     surname: '',
@@ -22,7 +23,13 @@ export class DashboardComponent implements OnInit {
   }
 
   enterValue() {
-    console.log(this.valueInput, 'samo da vidis sta je ovo')
+    console.log(this.valueInput)
+    this.input=true;
+  }
+
+  showValue(a){
+    a= this.valueInput;
+    return a;
   }
 
 }
