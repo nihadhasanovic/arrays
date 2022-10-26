@@ -26,6 +26,31 @@ export class AppComponent {
     {type: "Kia", model: "sportage", year: 2015, modern: false, expensive: false},
   ];
 
+  arr = ['abcdef','ghijkl','mnoprs','stuvwxyz'];
+  styles:any[]=[];
+
+  //change function to complete an action and reverse it
+  toggle(index:number)  //A function that change the variable
+  {
+    if (!this.styles[index])
+      this.styles[index]={
+        'background-color':'yellow',
+        'border':'lightgray',
+        'font-size':'20px',
+        'color':'darkgreen'}
+    else
+      this.styles[index]=null;
+  }
+
+  selectedIndex:number=-1
+
+  toggleS(index:number)
+  {
+    if (this.selectedIndex==index)
+      this.selectedIndex=-1;
+    else
+      this.selectedIndex=index;
+  }
 
 
   //pushing number generated in child component to an array in parent component

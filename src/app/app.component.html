@@ -41,3 +41,28 @@
   <ul><li [ngClass]="change()" *ngFor = "let b of bla">{{b}}</li></ul>
 </div>
 
+<hr>
+
+<div class = "ngstyle1">
+ <ul>
+   <li *ngFor = "let a of arr;let i=index"
+       [ngStyle]="i==selectedIndex?
+   {'background-color':'yellow',
+         'border':'lightgray',
+         'font-size':'20px',
+         'color':'darkgreen'}:null"
+      (click)="toggleS(i)">{{a}}
+   </li>
+ </ul>
+</div>
+
+<hr>
+
+<div class = "ngstyle2">
+  <ul>
+    <li *ngFor = "let a of arr;let i=index">
+      <span [ngStyle]="styles[i]"> {{a}} </span>
+      <button (click)="toggle(i)">click </button> </li>
+  </ul>
+</div>
+
