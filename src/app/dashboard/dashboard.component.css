@@ -1,11 +1,13 @@
+.userInputContainer {
+  display: block;
+}
 .userInput{
-
-  background-color: lightgray;
-  padding: 20px;
-  font-size:20px;
-  margin-left: 20px;
-  margin-right:1000px;
-  margin-top:20px;
+  display:inline-block;
+  width:auto;
+  border:1px solid blue;
+  background:lightgray;
+  padding:5px;
+  margin:5px;
 }
 
 input:hover {

@@ -1,30 +1,31 @@
 
-<div class = "userInput">
+<div class = "userInputContainer">
 
-  <label for ="name">Name</label><br>
-  <input id = "name"[(ngModel)]="valueInput.name" placeholder="Enter name">
-  <br><br>
+  <div class = "userInput">
+    <label for ="name">Name</label><br>
+    <input id = "name"[(ngModel)]="valueInput.name" placeholder="Enter name">
+    <br><br>
 
-  <label for = "surname">Surname</label><br>
-  <input id = "surname"[(ngModel)]="valueInput.surname" placeholder="Enter surname">
-  <br><br>
+    <label for = "surname">Surname</label><br>
+    <input id = "surname"[(ngModel)]="valueInput.surname" placeholder="Enter surname">
+    <br><br>
 
-  <label for = "ID">ID</label><br>
-  <input id = "ID"[(ngModel)]="valueInput.id" placeholder="Enter id">
-  <br><br>
+    <label for = "ID">ID</label><br>
+    <input id = "ID"[(ngModel)]="valueInput.id" placeholder="Enter id">
+    <br><br>
 
 
-  <label for = "Age">Age</label><br>
-  <input id = "Age" type = "number" [(ngModel)]="valueInput.age" placeholder="Enter age">
-  <br><br>
+    <label for = "Age">Age</label><br>
+    <input id = "Age" type = "number" [(ngModel)]="valueInput.age" placeholder="Enter age">
+    <br><br>
 
-  <button (click) = "enterValue()">Submit</button>
+    <button (click) = "enterValue()">Submit</button>
 
-  <div *ngIf = "input ? showValue(valueInput):null">
+  </div>
+</div>
+<div *ngIf = "input ? showValue(valueInput):null">
   <p><em>Name:</em> <strong> {{valueInput.name}}</strong></p>
   <p><em>Surname:</em> <strong> {{valueInput.surname}}</strong></p>
   <p><em>Id:</em> <strong> {{valueInput.id}}</strong></p>
   <p><em>Age:</em> <strong> {{valueInput.age}}</strong></p>
-  </div>
-
 </div>
