@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {LandingService, User} from "../services/landing.service";
 
 @Component({
   selector: 'app-home',
@@ -32,9 +33,12 @@ export class HomeComponent implements OnInit {
 
   @Output() newNumberEvent = new EventEmitter<any>;
 
-  constructor() { }
+  user!: User
+
+  constructor(public landingService: LandingService) { }
 
   ngOnInit(): void {
+    this.user = this.landingService.user
   }
 
 

@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 
-
+interface Car {
+  type: string,
+  model: string,
+  year: number,
+  modern: boolean,
+  expensive: boolean
+}
 
 @Component({
   selector: 'app-root',
@@ -17,7 +23,7 @@ export class AppComponent {
   colorChar='red';
   bla = [4,5,6,7];
 
-  car:{type: string, model: string, year: number, modern:boolean, expensive:boolean}[]=[
+  car: Car[]=[
     {type: "Golf", model: "mk4", year: 2001, modern:false, expensive: false},
     {type: "Audi", model: "rs6", year: 2020, modern:true, expensive: true},
     {type: "BMW", model: "e60", year: 2010, modern: false, expensive: false},
