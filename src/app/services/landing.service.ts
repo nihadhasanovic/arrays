@@ -28,4 +28,10 @@ export class LandingService {
   set user(value: User) {
     this._user = value;
   }
+
+  getInfo(): User{
+    return this._user;
+  }
+
+
 }

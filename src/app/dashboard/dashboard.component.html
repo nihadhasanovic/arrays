@@ -19,13 +19,28 @@
     <input id = "Age" type = "number" [(ngModel)]="valueInput.age" placeholder="Enter age">
     <br><br>
 
-    <button (click) = "enterValue()">Submit</button>
+    <button (click) = "enterValue(); add()">Submit</button>
 
   </div>
 </div>
-<div *ngIf = "input ? showValue(valueInput):null">
+<div  *ngIf = "input ? showValue(valueInput):null">
   <p><em>Name:</em> <strong> {{valueInput.name}}</strong></p>
   <p><em>Surname:</em> <strong> {{valueInput.surname}}</strong></p>
   <p><em>Id:</em> <strong> {{valueInput.id}}</strong></p>
   <p><em>Age:</em> <strong> {{valueInput.age}}</strong></p>
 </div>
+
+<hr>
+
+
+<div class="serviceInfo">
+  <p><strong>Service info:</strong></p>
+<p>Name: {{getInfoFromService().name}}</p>
+<p>Surname: {{getInfoFromService().surname}}</p>
+<p>Id: {{getInfoFromService().id}}</p>
+<p>Age: {{getInfoFromService().age}}</p>
+
+</div>
+
+
+

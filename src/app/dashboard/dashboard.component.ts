@@ -4,7 +4,7 @@ import {LandingService, User} from "../services/landing.service";
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
   user!: User
@@ -16,10 +16,10 @@ export class DashboardComponent implements OnInit {
     age: 0
   }
 
-  constructor(public landingService: LandingService) { }
+  constructor(public landing: LandingService) { }
 
   ngOnInit(): void {
-    this.user = this.landingService.user
+    this.user = this.landing.user
   }
 
   enterValue() {
@@ -31,5 +31,19 @@ export class DashboardComponent implements OnInit {
     a= this.valueInput;
     return a;
   }
+
+  getInfoFromService(){
+    this.user=this.landing.getInfo();
+    return this.user;
+
+  }
+
+  add(){
+    this.landing.user=this.valueInput;
+  }
+
+
+
+
 
 }
